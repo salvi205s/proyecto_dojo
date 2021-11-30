@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+    /* border: 2px solid black; */
+}
+
+p, h1, a {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    margin-bottom: -2rem;
+    display: flex;
+}
+
+html, body{
+    height: 100%;
+}
+
+
+.container-xl{
+    display: flex;
+    height: 100%;
+    flex-flow: column;
+}
+
+.cabecera_escritorio {
+    border-bottom: 2px solid #EE1C25;
+}
+
+.justify-content-start>div:nth-child(2) {
+    cursor: pointer;
+}
+
+div.cabecera_escritorio div#user div#userIni a {
+    color: black;
+    text-decoration: none;
+}
+
+.cabecera_movil {
+    display: none;
+}
+
+#menu {
+    display: none;
+    /*d-none*/
+    color: black;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    background: #ECE9E9;
+    transition-duration: 1s;
+    height: 100vh;
+    z-index: 100;
+}
+
+.logo-menu-movil>div:nth-child(1)>h3 {
+    color: #EE1C25;
+}
+
+.kankulogo {
+    width: 40px;
+}
+
+img.cerrar {
+    margin-top: 0.4rem;
+    width: 20px;
+    cursor: pointer;
+}
+
+div.cabecera_movil img {
+    cursor: pointer;
+}
+
+#lista-menu li a {
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.kanku {
+    width: 32px;
+}
+
+.silueta {
+    width: 100px;
+}
+
+.user {
+    width: 29px;
+    height: 28px;
+    margin-bottom: 1rem;
+}
+
+/* fin de cabecera */
+
+/* ----------------------------------------------------------------- */
+
+/* tamaño del carrousel */
+
+#carousel-controles-indicadores  div {
+    height: auto;
+}
+
+/* color de fondo del div del texto */
+
+.historia, .palabra, .horario, .contacto, .nosotros {
+    background-color: #ECE9E9;
+}
+
+/* da tamaño a los kanjis */
+
+.kanji_izq img, .kanji_drcho img {
+    width: 5rem;
+}
+
+/* alinea en el centro en kanji derecho */
+
+.kanji_drcho {
+    align-items: flex-end;
+}
+
+.text-dark {
+    font-size: 0.7rem;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #3D3B3B;
+    margin-top: 5rem;
+}
+
+footer div {
+    /* background-color: #3D3B3B; */
+    display: flex;
+}
+
+h3>img:nth-child(1) {
+    width: 50px;
+}
+
+div.col-sm-12:nth-child(2) {
+    margin-left: -5rem;
+    margin-right: 4em;
+}
+
+a#go-up {
+    position: fixed;
+    right: 0.5rem;
+    bottom: 3.5rem;
+    display: none;
+}
+
+/* fin de home */
+
+/* ----------------------------------------------------------------- */
+
+/* pagina horario */
+
+div.horario div div p {
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+/* ----------------------------------------------------------------- */
+
+/* pagina contacto */
+
+input::placeholder, textarea::placeholder {
+    color: transparent;
+}
+
+#inlineFrameExample {
+    display: none;
+}
+
+/* ----------------------------------------------------------------- */
+
+/* pagina inicio sesion */
+
+input::placeholder {
+    text-align: center;
+    font-weight: bold;
+}
+
+.text_enlace {
+    color: grey;
+    text-decoration: none;
+}
+
+/* ----------------------------------------------------------------- */
+
+/* pagina tablaClientes */
+
+#tabladatosContainer {
+
+    width: 1388px;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .cabecera_escritorio {
+        display: none;
+    }
+    .cabecera_movil {
+        display: flex;
+        
+    }
+
+  
+    footer div {
+        flex-flow: column;
+    }
+    div.col-sm-12:nth-child(2) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .kanji_izq, .kanji_drcho {
+        display: none;
+    }
+    /* fin de home */
+    .labEscritorio {
+        visibility: hidden;
+    }
+    input::placeholder, textarea::placeholder {
+        color: #3D3B3B
+    }
+}
+
+@media (max-width: 553px) {
+    .formisDatos {
+        flex-flow: column;
+    }
+   
+    
+}
