@@ -110,7 +110,7 @@
                 if (isset($_SESSION['nombreSesion'])) {
 
                     if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == "admin") {
-                        ?>
+                ?>
                         <a href="<?= base_url() ?>TablaDatosController/listarTabla" class="font-weight-bold mt-2 ">
                             <img src="<?= base_url() ?>recursos/img/user.png" class="user" alt="user">
                             <?= $_SESSION['nombreSesion'] ?></a>
@@ -399,17 +399,6 @@
 
                 <!-- kanku ------------------------------------------------ -->
                 <div class="palabra text-center p-3 mt-3 mb-3">
-
-                    <h3 class="text-center">Kyokushin Karate</h3>
-                    <p>
-                        La palabra "Kyokushin" esta compuesta por dos ideogramas:
-                        KYOKU: Esta palabra no existe en español, representa, el centro magnético que guía a las
-                        brújulas,
-                        ya que este ideograma no tiene una traducción real dentro de nuestra lengua, se puede traducir
-                        como
-                        polo, camino hacia, ruta a seguir. También se le otorga el sigificado de Último (a).
-
-                    </p>
 
                     <h3 class="text-center">Kanku</h3>
                     <p>
