@@ -216,7 +216,7 @@
                             <label class="labEscritorio" for="nombre">Su nombre(requerido)</label>
                             <input type="text" name="nombre" id="nombre" placeholder="Su nombre(requerido)" required>
 
-                            <label class="labEscritorio" for="nombre">Su email(requerido)</label>
+                            <label class="labEscritorio" for="email">Su email(requerido)</label>
                             <input type="email" name="email" id="email" placeholder="Su email(requerido)" required>
 
                             <label class="labEscritorio" for="mensaje">Su mensaje</label>
