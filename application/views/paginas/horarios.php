@@ -61,7 +61,7 @@ html, body{
                     <div class="nav navbar-nav d-flex ml-md-auto font-weight-bold ">
                         <a class="nav-item nav-link mr-lg-4 mr-md-2" href="<?= base_url() ?>DojoController/cargarPag/home">INICIO</a>
                         <a class="nav-item nav-link mr-lg-4 mr-md-2" href="<?= base_url() ?>DojoController/cargarPag/grados">GRADOS</a>
-                        <a class="nav-item nav-link active mr-lg-4 mr-md-2" style="background-color: #EE1C25; color: white;" href="<?= base_url() ?>DojoController/cargarPag/horarios">HORARIOS</a>
+                        <a class="nav-item nav-link active mr-lg-4 mr-md-2 bg-danger text-white" href="<?= base_url() ?>DojoController/cargarPag/horarios">HORARIOS</a>
                         <a class="nav-item nav-link mr-lg-4 mr-md-2" href="<?= base_url() ?>DojoController/cargarPag/contacto">CONTACTO</a>
                         <a class="nav-item nav-link mr-lg-4 mr-md-2" href="<?= base_url() ?>DojoController/cargarPag/nosotros">NOSOTROS</a>
                     </div>
@@ -181,7 +181,7 @@ html, body{
                 <ul id="lista-menu" class="list-unstyled ">
                     <li><a class="nav-item nav-link mr-lg-4 mr-md-2" href="<?= base_url() ?>DojoController/cargarPag/home">INICIO</a></li>
                     <li><a class="nav-item nav-link mr-lg-4 mr-md-2" href="<?= base_url() ?>DojoController/cargarPag/grados">GRADOS</a></li>
-                    <li><a class="nav-item nav-link active mr-lg-4 mr-md-2" style=" color: #EE1C25;" href="<?= base_url() ?>DojoController/cargarPag/horarios">HORARIOS</a></li>
+                    <li><a class="nav-item nav-link active mr-lg-4 mr-md-2 text-danger" href="<?= base_url() ?>DojoController/cargarPag/horarios">HORARIOS</a></li>
                     <li><a class="nav-item nav-link mr-lg-4 mr-md-2" href="<?= base_url() ?>DojoController/cargarPag/contacto">CONTACTO</a></li>
                     <li><a class="nav-item nav-link mr-lg-4 mr-md-2" href="<?= base_url() ?>DojoController/cargarPag/nosotros">NOSOTROS</a></li>
 
