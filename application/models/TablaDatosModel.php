@@ -84,10 +84,7 @@ class TablaDatosModel extends CI_Model
                 "email" => $data['email_edit'],
                 "edad" => $data['edad_edit'],
 
-
-                "horario" => $data['horario_edit'],
-                "horSemana" => $data['horSemana_edit'],
-                "numero_cuenta" => $data['nCuenta_edit'],
+                "nunCuenta" => $data['nCuenta_edit'],
             );
 
             $suscripcion = array(

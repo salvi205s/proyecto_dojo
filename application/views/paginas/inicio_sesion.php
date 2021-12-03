@@ -162,7 +162,7 @@
 
 
                         <label class="labEscritorio col-12" for="clave">Contraseña</label>
-                        <input class="col-11" type="password" name="clave" id="clave" placeholder="Contraseña"  required>
+                        <input class="col-11" type="password" name="clave" id="clave" placeholder="Contraseña" value="1234" required>
 
                         <button type="submit" class="boton col-5 mt-3 mb-3 align-self-center btn btn-danger ">Enviar</button>
                         <br>

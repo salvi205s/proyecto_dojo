@@ -236,10 +236,8 @@
 
                 <!-- historia -->
                 <div class="historia text-center p-3 d-flex justify-content-around flex-column">
-                    <picture>
-                        <source media="(min-width:650px)" srcset="<?= base_url() ?>recursos/img/oyama-min-v-movil.jpg">
-                        <img src="<?= base_url() ?>recursos/img/oyama-min.jpg" width="413" height="212" class="w-75 m-auto" alt="Oyama">
-                    </picture>
+                        <img src="<?= base_url() ?>recursos/img/oyama-min-v-movil.jpg" width="413" height="212" class="w-75 m-auto" alt="Oyama">
+                    
                     <a class="text-dark mb-3" href="https://commons.wikimedia.org/w/index.php?curid=32432485">
                         https://commons.wikimedia.org/w/index.php?curid=32432485
                     </a>

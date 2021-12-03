@@ -169,7 +169,6 @@ class TablaDatosController extends CI_Controller
 
 				$this->load->view('head');
 				$this->load->view('paginas/tablaClientes', $data);
-				$this->load->view('footer');
 			}
 		} else {
 			$_SESSION['errorRegistro'] = true;
@@ -179,7 +178,6 @@ class TablaDatosController extends CI_Controller
 
 			$this->load->view('head');
 			$this->load->view('paginas/tablaClientes', $data);
-			$this->load->view('footer');
 		}
 	}
 }
