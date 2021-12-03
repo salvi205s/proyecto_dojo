@@ -299,11 +299,11 @@ if (!isset($_SESSION['nombreSesion'])) {
                         }
                         ?>
                         <label class="labEscritorio col-12" for="clave">Contraseña</label>
-                        <input class="mb-2 col-11" type="password" name="clave" id="clave" value="1234" placeholder="Contraseña" required>
+                        <input class="mb-2 col-11" type="password" name="clave" id="clave"  placeholder="Contraseña" required>
 
                         <label class="labEscritorio col-12" for="claveRep">Repita la contraseña</label>
 
-                        <input class="mb-2 col-11" type="password" name="claveRep" id="claveRep" value="1234" placeholder="Repita Contraseña" required>
+                        <input class="mb-2 col-11" type="password" name="claveRep" id="claveRep"  placeholder="Repita Contraseña" required>
 
                         <?php
                         if (isset($_SESSION['clavesIguales'])) {
@@ -400,11 +400,11 @@ if (!isset($_SESSION['nombreSesion'])) {
                         }
                         ?>
                         <label class="labEscritorio col-12" for="clave">Contraseña</label>
-                        <input class="mb-2 col-11" type="password" name="clave" id="clave" value="1234" placeholder="Contraseña" required>
+                        <input class="mb-2 col-11" type="password" name="clave" id="clave"  placeholder="Contraseña" required>
 
                         <label class="labEscritorio col-12" for="claveRep">Repita la contraseña</label>
 
-                        <input class="mb-2 col-11" type="password" name="claveRep" id="claveRep" value="1234" placeholder="Repita Contraseña" required>
+                        <input class="mb-2 col-11" type="password" name="claveRep" id="claveRep"  placeholder="Repita Contraseña" required>
 
                         <?php
                         if (isset($_SESSION['clavesIguales'])) {

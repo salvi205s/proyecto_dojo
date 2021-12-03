@@ -8,7 +8,7 @@
 
                     <div class="d-flex align-items-center">
                         <h3 class="font-weight-bolder col-12 pl-0">
-                            <img src="<?= base_url() ?>recursos/img/kankuLogo-min.png" width="50" height="50"  class="" alt="logo">
+                            <img src="<?= base_url() ?>recursos/img/kankuLogo.png" width="50" height="50"  class="" alt="logo">
                             Dojo Kyoku
                         </h3>
 

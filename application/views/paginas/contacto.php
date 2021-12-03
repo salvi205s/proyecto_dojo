@@ -1,33 +1,7 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-
-    <link rel="stylesheet" href="<?= base_url() ?>recursos/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= base_url() ?>recursos/css/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,900;1,100&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,900;1,100;1,300&display=swap" rel="stylesheet">
-
-    <script src="<?= base_url() ?>recursos/js/jquery-3.6.0.min.js"></script>
-    <script src="<?= base_url() ?>recursos/js/popper.min.js"></script>
-    <script src="<?= base_url() ?>recursos/js/bootstrap.min.js"></script>
-    <script src="<?= base_url() ?>recursos/js/jquery.animate-colors-min.js"></script>
-    <script src="<?= base_url() ?>recursos/js/js.js"></script>
-
-</head> -->
 
 <body>
 
-    <div class="container-xl m-auto">
+    <div class="container-fluid m-auto">
 
 
         <div class="cabecera_escritorio row mb-4">
@@ -256,45 +230,3 @@
         </div>
         <!-- fin de cuerpo -->
 
-        <!-- pie de pagina ----------------------------------------------------------------------- -->
-<!--         <footer>
-
-            <div class="col-12 text-white pt-4 ">
-
-
-                <div class="logopie pb-2 flex-column col-sm-12 col-md-5 col-lg-4">
-
-                    <div class="d-flex align-items-center">
-                        <h3 class="font-weight-bolder col-12 pl-0">
-                            <img src="<?= base_url() ?>recursos/img/kankuLogo.png" class="" alt="logo">
-                            Dojo Kyoku
-                        </h3>
-
-                    </div>
-
-                </div>
-
-                <div class="col-sm-12 col-md-5 pt-lg-2 text-md-center text-sm-left">
-                    <h4 class="">
-                        Av. Juan Carlos I nº26
-                        29680, Málaga, Estepona <br />
-                        Telefono: 666325547
-                    </h4>
-                </div>
-
-
-            </div>
-            <p class="text-white ml-3">
-                © 2021. All rights reserved.
-            </p>
-        </footer>
-
-        <a id="go-up" href="#contenedor">
-            <img src="<?= base_url() ?>recursos/img/down-arrow.png" width="64" height="64" alt="ir hacia arriba">
-        </a>
-
-    </div>
-
-</body>
-
-</html> -->

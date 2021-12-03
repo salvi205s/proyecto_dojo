@@ -40,7 +40,7 @@
 
                 <nav class="navbar navbar-expand navbar-light ml-auto mr-xl-4 p-0 mt-4">
                     <div class="nav navbar-nav d-flex ml-md-auto font-weight-bold ">
-                        <a class="nav-item nav-link active mr-lg-4 mr-md-2 bg-danger text-white"  href="#">INICIO</a>
+                        <a class="nav-item nav-link active mr-lg-4 mr-md-2 bg-danger text-white" href="#">INICIO</a>
                         <a class="nav-item nav-link mr-lg-4 mr-md-2" href="<?= base_url() ?>DojoController/cargarPag/grados">GRADOS</a>
                         <a class="nav-item nav-link mr-lg-4 mr-md-2" href="<?= base_url() ?>DojoController/cargarPag/horarios">HORARIOS</a>
                         <a class="nav-item nav-link mr-lg-4 mr-md-2" href="<?= base_url() ?>DojoController/cargarPag/contacto">CONTACTO</a>
@@ -64,7 +64,7 @@
                         if ($_SESSION['tipo'] == "admin") {
                     ?>
                             <a href="<?= base_url() ?>TablaDatosController/listarTabla" class="font-weight-bold mt-2 ">
-                                <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
+                                <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32" class="user" alt="user">
                                 <?= $_SESSION['nombreSesion'] ?></a>
 
                         <?php
@@ -72,7 +72,7 @@
 
                         ?>
                             <a href="<?= base_url() ?>DojoController/cargarPagMisDatos/misDatos" class="font-weight-bold mt-2">
-                                <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
+                                <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32" class="user" alt="user">
                                 <?= $_SESSION['nombreSesion'] ?></a>
 
                         <?php
@@ -80,7 +80,7 @@
                     } else {
                         ?>
                         <a href="<?= base_url() ?>DojoController/cargarPag/inicio_sesion" class="font-weight-bold">
-                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
+                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32" class="user" alt="user">
                             Inicia sesion</a>
                     <?php
                     }
@@ -99,7 +99,7 @@
             </div>
 
             <div class="d-flex align-items-center justify-content-center col-7 ">
-                <img src="<?= base_url() ?>recursos/img/kanku-min.png" width="32" height="32"  class="kanku" alt="kanku">
+                <img src="<?= base_url() ?>recursos/img/kanku-min.png" width="32" height="32" class="kanku" alt="kanku">
                 <h4 class="font-weight-bolder">Dojo Kyoku</h4>
             </div>
 
@@ -111,7 +111,7 @@
                     if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == "admin") {
                 ?>
                         <a href="<?= base_url() ?>TablaDatosController/listarTabla" class="font-weight-bold mt-2 ">
-                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
+                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32" class="user" alt="user">
                             <?= $_SESSION['nombreSesion'] ?></a>
 
                     <?php
@@ -119,7 +119,7 @@
 
                     ?>
                         <a href="<?= base_url() ?>DojoController/cargarPagMisDatos/misDatos" class="font-weight-bold mt-2">
-                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
+                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32" class="user" alt="user">
                             <?= $_SESSION['nombreSesion'] ?></a>
 
                     <?php
@@ -127,7 +127,7 @@
                 } else {
                     ?>
                     <a href="<?= base_url() ?>DojoController/cargarPag/inicio_sesion" class="font-weight-bold">
-                        <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
+                        <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32" class="user" alt="user">
                     </a>
                 <?php
                 }
@@ -144,7 +144,7 @@
                     <div class="d-flex align-items-center justify-content-center col-12 mb-4 ">
 
                         <h3 class="font-weight-bolder">Dojo Kyoku</h3>
-                        <img src="<?= base_url() ?>recursos/img/kankuLogo.png" width="32" height="32"  class="kankulogo" alt="kanku">
+                        <img src="<?= base_url() ?>recursos/img/kankuLogo.png" width="32" height="32" class="kankulogo" alt="kanku">
                     </div>
 
                 </div>
@@ -177,6 +177,7 @@
         <!-- cuerpo -->
         <div id="contenedor" class="cuerpo m-auto p-0 d-flex align-items-stretch">
 
+
             <!-- div izquierdo ------------------------------------------------- -->
             <div class="kanji_izq col-2 d-md-flex justify-content-around flex-column">
                 <img src="<?= base_url() ?>recursos/img/letras-min.png" width="80" height="292" alt="kanji">
@@ -199,13 +200,24 @@
 
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="<?= base_url() ?>recursos/img/portada1-min.jpg" width="782" height="440"  class="imgCarrousel d-block w-100 h-100" alt="portada1">
+                            <picture>
+                                <source media="(min-width:650px)" srcset="<?= base_url() ?>recursos/img/portada1-min.jpg">
+                                <img src="<?= base_url() ?>recursos/img/portada1-min-v-movil.jpg" width="400" height="200" class="imgCarrousel d-block w-100 h-100" alt="portada1">
+                            </picture>
+                            <!-- <img src="<?= base_url() ?>recursos/img/portada1-min.jpg" width="782" height="440" class="imgCarrousel d-block w-100 h-100" alt="portada1"> -->
                         </div>
                         <div class="carousel-item">
-                            <img src="<?= base_url() ?>recursos/img/portada2-min.jpg" width="782" height="440"  class="imgCarrousel d-block w-100 h-100" alt="portada2">
+                            <picture>
+                                <source media="(min-width:650px)" srcset="<?= base_url() ?>recursos/img/portada2-min.jpg">
+                                <img src="<?= base_url() ?>recursos/img/portada2-min-v-movil.jpg" width="400" height="200" class="imgCarrousel d-block w-100 h-100" alt="portada2">
+                            </picture>
+                            <!-- <img src="<?= base_url() ?>recursos/img/portada2-min.jpg" width="782" height="440" class="imgCarrousel d-block w-100 h-100" alt="portada2"> -->
                         </div>
                         <div class="carousel-item">
-                            <img src="<?= base_url() ?>recursos/img/portada3-min.jpg" width="782" height="440"  class="imgCarrousel d-block w-100 h-100" alt="portada3">
+                            <picture>
+                                <source media="(min-width:650px)" srcset="<?= base_url() ?>recursos/img/portada3-min.jpg">
+                                <img src="<?= base_url() ?>recursos/img/portada3-min-v-movil.jpg" width="400" height="200" class="imgCarrousel d-block w-100 h-100" alt="portada3">
+                            </picture>
                         </div>
                     </div>
 
@@ -221,9 +233,13 @@
 
                 </div>
 
+
                 <!-- historia -->
                 <div class="historia text-center p-3 d-flex justify-content-around flex-column">
-                    <img src="<?= base_url() ?>recursos/img/oyama-min.jpg" width="413" height="212"  class="w-75 m-auto" alt="kanji">
+                    <picture>
+                        <source media="(min-width:650px)" srcset="<?= base_url() ?>recursos/img/oyama-min-v-movil.jpg">
+                        <img src="<?= base_url() ?>recursos/img/oyama-min.jpg" width="413" height="212" class="w-75 m-auto" alt="Oyama">
+                    </picture>
                     <a class="text-dark mb-3" href="https://commons.wikimedia.org/w/index.php?curid=32432485">
                         https://commons.wikimedia.org/w/index.php?curid=32432485
                     </a>
@@ -431,7 +447,7 @@
         <!-- fin de cuerpo -->
 
         <!-- pie de pagina ----------------------------------------------------------------------- -->
-       <!--  <footer>
+        <!--  <footer>
 
             <div class="col-12 text-white pt-4 ">
 
