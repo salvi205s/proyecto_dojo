@@ -33,7 +33,7 @@ html, body{
 }
 
 .cabecera_escritorio {
-    border-bottom: 2px solid #EE1C25;
+    border-bottom: 2px solid #dc3545;
 }
 
 .justify-content-start>div:nth-child(2) {
@@ -63,7 +63,7 @@ div.cabecera_escritorio div#user div#userIni a {
 }
 
 .logo-menu-movil>div:nth-child(1)>h3 {
-    color: #EE1C25;
+    color: #dc3545;
 }
 
 .kankulogo {
@@ -218,7 +218,6 @@ input::placeholder {
         display: flex;
         
     }
-
   
     footer div {
         flex-flow: column;
@@ -239,10 +238,20 @@ input::placeholder {
     }
 }
 
+/* version de movil */
 @media (max-width: 553px) {
     .formisDatos {
         flex-flow: column;
     }
-   
+
+    /* margin al label edad en registro.php */
+    div#contenedor.cuerpo.m-auto.p-0.d-flex.align-items-stretch div.centro.col-md-8.mb-4 div.contacto.col-12.p-3.text-center.font-weight-bold div.col-12.m-auto.mb-3.text-left form.d-flex.flex-column.align-items-center.col-12 div.col-12.mb-3.d-flex.pl-0 label.edadR.col-2{
+        margin-right: 2rem;
+    }
+
+    /* pone el select horario de bajo del texto, para que no se salga */
+    div.col-12:nth-child(12){
+        flex-flow: column;
+    }
     
 }

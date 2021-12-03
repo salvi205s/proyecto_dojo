@@ -27,7 +27,7 @@
 
 <body>
 
-    <div class="container-xl m-auto">
+    <div class="container-fluid m-auto">
 
         <div class="cabecera_escritorio row mb-4">
 
@@ -187,7 +187,7 @@
                             <input class="mb-3 col-11" type="email" name="email" id="email" placeholder="Email" value="<?php if (isset($_POST['email'])) echo $_POST['email'] ?>" required>
 
                             <div class="col-12 mb-3 d-flex pl-0">
-                                <label class="col-2 " for="edadR">Edad</label>
+                                <label class="edadR col-2" for="edadR">Edad</label>
 
                                 <select class="" name="edadR" id="edadR">
 
