@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -23,7 +23,7 @@
     <script src="<?= base_url() ?>recursos/js/jquery.animate-colors-min.js"></script>
     <script src="<?= base_url() ?>recursos/js/js.js"></script>
 
-</head>
+</head> -->
 
 <body>
 
@@ -35,7 +35,8 @@
             <div class="col-xl-9 col-md-8 p-0">
 
                 <div class="d-flex align-items-center justify-content-center col-7 ml-auto">
-                    <img src="<?= base_url() ?>recursos/img/kanku-min.png" class="kanku" alt="kanku">
+                                        <img src="<?= base_url() ?>recursos/img/kanku-min.png" width="32" height="32" class="kanku" alt="kanku">
+
                     <h1 class="font-weight-bolder">Dojo Kyoku</h1>
                 </div>
 
@@ -53,14 +54,14 @@
             <div id="user" class="d-flex justify-content-start ml-xl-auto mr-xl-5 pt-1">
 
                 <div class="d-flex align-items-end" id="silueta-cont">
-                    <img src="<?= base_url() ?>recursos/img/Karate_silhouette.png" class="silueta" alt="silueta karate">
+                    <img src="<?= base_url() ?>recursos/img/Karate_silhouette-min.png" width="100" height="111" class="silueta" alt="silueta karate">
 
                 </div>
 
                 <div id="userIni" class="d-flex align-items-start h-25">
 
                     <a href="<?= base_url() ?>index.php/DojoController/cargarPag/inicio_sesion" class="font-weight-bold mt-2">
-                        <img src="<?= base_url() ?>recursos/img/user.png" class="user" alt="user">
+                        <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
                         Inicia sesion</a>
 
                 </div>
@@ -71,17 +72,18 @@
         <!-- ------------------------------------------------------------------------------------------------ -->
         <div class="cabecera_movil row mb-3">
             <div class="col-2 d-flex align-items-center">
-                <img src="<?= base_url() ?>recursos/img/menu.png" width="32" alt="menu">
+                <img src="<?= base_url() ?>recursos/img/menu.png" width="32" height="32" alt="menu">
             </div>
 
             <div class="d-flex align-items-center justify-content-center col-7 ">
-                <img src="<?= base_url() ?>recursos/img/kanku-min.png" class="kanku" alt="kanku">
+                                    <img src="<?= base_url() ?>recursos/img/kanku-min.png" width="32" height="32" class="kanku" alt="kanku">
+
                 <h4 class="font-weight-bolder">Dojo Kyoku</h4>
             </div>
 
             <div class="col-2 d-flex align-items-center justify-content-end ml-auto">
                 <a href="<?= base_url() ?>index.php/DojoController/cargarPag/inicio_sesion" class="font-weight-bold mt-2">
-                    <img src="<?= base_url() ?>recursos/img/user.png" class="user" alt="user">
+                    <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
                 </a>
             </div>
         </div>
@@ -95,12 +97,12 @@
                     <div class="d-flex align-items-center justify-content-center col-12 mb-4 ">
 
                         <h3 class="font-weight-bolder">Dojo Kyoku</h3>
-                        <img src="<?= base_url() ?>recursos/img/kankuLogo.png" class="kankulogo" alt="kanku">
+                        <img src="<?= base_url() ?>recursos/img/kankuLogo.png" width="32" height="32"  class="kankulogo" alt="kanku">
                     </div>
 
                 </div>
                 <div class="cerrar col-1 d-flex justify-content-center align-items-start">
-                    <img src="<?= base_url() ?>recursos/img/close.png" class="cerrar" alt="kanku">
+                    <img src="<?= base_url() ?>recursos/img/close.png" width="20" height="20" class="cerrar" alt="cerar">
 
                 </div>
             </div>
@@ -131,7 +133,7 @@
 
             <!-- div izquierdo ------------------------------------------------- -->
             <div class="kanji_izq col-2 d-md-flex justify-content-around flex-column">
-                <img src="<?= base_url() ?>recursos/img/letras-min.png" alt="kanji">
+                <img src="<?= base_url() ?>recursos/img/letras-min.png" width="80" height="292" alt="kanji">
 
             </div>
             <!-- fin div izquierdo ------------------------------------------------- -->
@@ -170,7 +172,7 @@
 
             <!-- div derecho ------------------------------------------------- -->
             <div class="kanji_drcho col-2 d-md-flex justify-content-around flex-column ">
-                <img src="<?= base_url() ?>recursos/img/letras-min.png" alt="kanji">
+                <img src="<?= base_url() ?>recursos/img/letras-min.png" width="80" height="292" alt="kanji">
 
 
             </div>
@@ -179,121 +181,3 @@
         </div>
         <!-- fin de cuerpo -->
 
-        <!-- pie de pagina ----------------------------------------------------------------------- -->
-        <footer>
-
-            <div class="col-12 text-white pt-4 ">
-
-
-                <div class="logopie pb-2 flex-column col-sm-12 col-md-5 col-lg-4">
-
-                    <div class="d-flex align-items-center">
-                        <h3 class="font-weight-bolder col-12 pl-0">
-                            <img src="<?= base_url() ?>recursos/img/kankuLogo.png" class="" alt="logo">
-                            Dojo Kyoku
-                        </h3>
-
-                    </div>
-
-                </div>
-
-                <div class="col-sm-12 col-md-5 pt-lg-2 text-md-center text-sm-left">
-                    <h4 class="">
-                        Av. Juan Carlos I nº26
-                        29680, Málaga, Estepona <br />
-                        Telefono: 666325547
-                    </h4>
-                </div>
-
-
-            </div>
-            <p class="text-white ml-3">
-                © 2021. All rights reserved.
-            </p>
-        </footer>
-
-        <a id="go-up" href="#contenedor">
-            <img src="<?= base_url() ?>recursos/img/down-arrow.png" alt="ir hacia arriba">
-        </a>
-
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- ------------------------------------------------- -->
-
-
-
-    <script>
-        $(document).ready(function() {
-
-            /* desplegar menu hamburguesa  */
-            $(".cabecera_movil > div:nth-child(1) > img:nth-child(1)").click(function(e) {
-                console.log("cerrar");
-
-
-                $("#menu").css({
-                    "display": "block"
-                });
-                $("#menu").stop().animate({
-                    "left": "0"
-                }, 500);
-                /* $("body").css({ "overflow": "hidden" }); */
-
-            });
-
-            $("img.cerrar").click(function(e) {
-
-                $("#menu").stop().animate({
-                    "left": "-100vw"
-                }, 500);
-
-            });
-
-
-            $(window).scroll(function() {
-                console.log("scroll");
-                if ($(window).scrollTop() > 1) {
-
-                    $("a#go-up").css("display", "block");
-
-                    $("a#go-up").click(function(e) {
-                        $("html, body").stop().animate({
-                            "scrollTop": "0"
-                        }, 800);
-                        console.log("arriba");
-                    });
-                    $("a#go-up").css("opacity", "0.5");
-
-
-                } else if ($(window).scrollTop() === 0) {
-                    $("header").css({
-                        "opacity": "1"
-                    });
-
-                    $("a#go-up").css("display", "none");
-
-                }
-            });
-
-
-            /* ---------------------------------------------------------------------- */
-        });
-    </script>
-
-
-</body>
-
-</html>

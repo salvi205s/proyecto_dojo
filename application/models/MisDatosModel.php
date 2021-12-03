@@ -18,15 +18,13 @@ class MisDatosModel extends CI_Model
     }
 
     /* ------------------------------------------------------------------------------------ */
+
+    //funcion para obtener los datos de un cliente para mostrarlos en misDatos
     public function datosCliente($id)
     {
 
-        /* SELECT clases.horario, pagos.estado FROM clases JOIN pagos ON pagos.idClase=clases.idClase WHERE pagos.idCliente=3 */
-        /* SELECT clases.horario, pagos.estado FROM clases JOIN pagos ON pagos.idClase=clases.idClase WHERE pagos.idCliente = '3' */
-
-
         return $this->db
-            ->select("clases.horario,clases.idClase, pagos.estado") # También puedes poner * si quieres seleccionar todo
+            ->select("clases.horario,clases.idClase, pagos.estado")
             ->from("clases")
             ->join("pagos", "pagos.idClase = clases.idClase")
             ->where("pagos.idCliente=" . $id)
@@ -34,6 +32,9 @@ class MisDatosModel extends CI_Model
             ->result();
     }
 
+    /* ------------------------------------------------------------------------------------ */
+
+    //funcion que pone el estado en pagado, y la fecha fin a cero
     public function pagar($id)
     {
 
@@ -54,11 +55,11 @@ class MisDatosModel extends CI_Model
 
         $this->db->where("idCliente", $id);
         $this->db->update('suscripcion', $suscripcion);
-
-
     }
 
-    
+    /* ------------------------------------------------------------------------------------ */
+
+    //funcion que pone el estado en pendiente, e introduce una feha fin
     public function darBaja($id)
     {
 
@@ -81,8 +82,6 @@ class MisDatosModel extends CI_Model
 
         $this->db->where("idCliente", $id);
         $this->db->update('suscripcion', $suscripcion);
-
-
     }
 
 

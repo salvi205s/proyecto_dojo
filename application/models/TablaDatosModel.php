@@ -8,12 +8,6 @@ class TablaDatosModel extends CI_Model
     //funcion que hace una consulta para listar todos los usuarios
     public function listar()
     {
-
-        /* SELECT DISTINCT clientes.*, suscripcion.fechaInicio, pagos.estado 
-FROM clientes 
-JOIN suscripcion ON suscripcion.idCliente=clientes.idCliente 
-JOIN pagos ON pagos.idCliente=clientes.idCliente  */
-
         return $this->db
             ->select("clientes.*, suscripcion.fechaInicio, pagos.*")
             ->from("clientes")
@@ -21,15 +15,6 @@ JOIN pagos ON pagos.idCliente=clientes.idCliente  */
             ->join("pagos", "pagos.idCliente=clientes.idCliente")
             ->get()
             ->result();
-
-        /*    $this->db->select("*");
-        $this->db->from($this->table);
-
-        $query = $this->db->get();
-
-        // print_r($this->db->last_query());
-
-        return $query->result(); */
     }
 
     //funcion que recibe un id para borrar al usuario que coincida con ese id
@@ -44,20 +29,21 @@ JOIN pagos ON pagos.idCliente=clientes.idCliente  */
     }
 
     //funcion que recibe datos para actualizar al usuario que tenga la id pasada
+    //si se le pasa la clave como parametro la actualiza
     public function editar_usuario($id, $data, $clave = false)
     {
 
         $this->db->select('clases' . '.precio');
 
-            $this->db->from('clases');
+        $this->db->from('clases');
 
-            $this->db->where('clases' . '.idClase', $data['horario_edit']);
+        $this->db->where('clases' . '.idClase', $data['horario_edit']);
 
-            $query = $this->db->get();
+        $query = $this->db->get();
 
-            $query = $query->result();
+        $query = $query->result();
 
-            $precio = $query[0]->precio;
+        $precio = $query[0]->precio;
 
         if (strlen($_POST['clave']) > 0) {
 
@@ -80,7 +66,7 @@ JOIN pagos ON pagos.idCliente=clientes.idCliente  */
                 "idClase" => $data['horario_edit'],
             );
 
-            
+
 
             $pagos = array(
 
@@ -108,27 +94,14 @@ JOIN pagos ON pagos.idCliente=clientes.idCliente  */
 
                 "idClase" => $data['horario_edit'],
             );
-          
+
             $pagos = array(
 
                 "idClase" => $data['horario_edit'],
                 "precio" => $precio
 
             );
-
-
-
-            /* UPDATE `pagos` SET `precio`=20 
-            WHERE `idCliente`= 41 */
-
-            /*  $query = $this->db->query("
-            UPDATE pagos 
-            SET precio='$precio' 
-            WHERE idCliente= $id"); */
         }
-
-
-
 
         $this->db->where("idCliente", $id);
         $this->db->update('clientes', $clientes);

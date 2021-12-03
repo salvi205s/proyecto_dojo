@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,7 +23,7 @@
     <script src="<?= base_url() ?>recursos/js/jquery.animate-colors-min.js"></script>
     <script src="<?= base_url() ?>recursos/js/js.js"></script>
 
-</head>
+</head> -->
 
 <body>
 
@@ -35,7 +35,8 @@
             <div class="col-xl-9 col-md-8 p-0">
 
                 <div class="d-flex align-items-center justify-content-center col-7 ml-auto">
-                    <img src="<?= base_url() ?>recursos/img/kanku-min.png" class="kanku" alt="kanku">
+                                        <img src="<?= base_url() ?>recursos/img/kanku-min.png" width="32" height="32" class="kanku" alt="kanku">
+
                     <h1 class="font-weight-bolder">Dojo Kyoku</h1>
                 </div>
 
@@ -53,7 +54,7 @@
             <div id="user" class="d-flex justify-content-start ml-xl-auto mr-xl-5 pt-1">
 
                 <div class="d-flex align-items-end" id="silueta-cont">
-                    <img src="<?= base_url() ?>recursos/img/Karate_silhouette.png" class="silueta" alt="silueta karate">
+                    <img src="<?= base_url() ?>recursos/img/Karate_silhouette-min.png" width="100" height="111" class="silueta" alt="silueta karate">
 
                 </div>
 
@@ -64,7 +65,7 @@
                     if (isset($_SESSION['nombreSesion'])) {
 
                         if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == "admin") {
-                            ?>
+                    ?>
                             <a href="<?= base_url() ?>TablaDatosController/listarTabla" class="font-weight-bold mt-2 ">
                                 <img src="<?= base_url() ?>recursos/img/user.png" class="user mb-3" alt="user">
                                 <?= $_SESSION['nombreSesion'] ?></a>
@@ -97,11 +98,12 @@
         <!-- ------------------------------------------------------------------------------------------------ -->
         <div class="cabecera_movil row mb-3">
             <div class="col-2 d-flex align-items-center">
-                <img src="<?= base_url() ?>recursos/img/menu.png" width="32" alt="menu">
+                <img src="<?= base_url() ?>recursos/img/menu.png" width="32" height="32" alt="menu">
             </div>
 
             <div class="d-flex align-items-center justify-content-center col-7 ">
-                <img src="<?= base_url() ?>recursos/img/kanku-min.png" class="kanku" alt="kanku">
+                                    <img src="<?= base_url() ?>recursos/img/kanku-min.png" width="32" height="32" class="kanku" alt="kanku">
+
                 <h4 class="font-weight-bolder">Dojo Kyoku</h4>
             </div>
 
@@ -111,9 +113,9 @@
                 if (isset($_SESSION['nombreSesion'])) {
 
                     if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == "admin") {
-                        ?>
+                ?>
                         <a href="<?= base_url() ?>TablaDatosController/listarTabla" class="font-weight-bold mt-2 ">
-                            <img src="<?= base_url() ?>recursos/img/user.png" class="user" alt="user">
+                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
                             <?= $_SESSION['nombreSesion'] ?></a>
 
                     <?php
@@ -121,7 +123,7 @@
 
                     ?>
                         <a href="<?= base_url() ?>DojoController/cargarPagMisDatos/misDatos" class="font-weight-bold mt-2">
-                            <img src="<?= base_url() ?>recursos/img/user.png" class="user" alt="user">
+                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
                             <?= $_SESSION['nombreSesion'] ?></a>
 
                     <?php
@@ -129,7 +131,7 @@
                 } else {
                     ?>
                     <a href="<?= base_url() ?>DojoController/cargarPag/inicio_sesion" class="font-weight-bold">
-                        <img src="<?= base_url() ?>recursos/img/user.png" class="user" alt="user">
+                        <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
                     </a>
                 <?php
                 }
@@ -146,12 +148,12 @@
                     <div class="d-flex align-items-center justify-content-center col-12 mb-4 ">
 
                         <h3 class="font-weight-bolder">Dojo Kyoku</h3>
-                        <img src="<?= base_url() ?>recursos/img/kankuLogo.png" class="kankulogo" alt="kanku">
+                        <img src="<?= base_url() ?>recursos/img/kankuLogo.png" width="32" height="32"  class="kankulogo" alt="kanku">
                     </div>
 
                 </div>
                 <div class="cerrar col-1 d-flex justify-content-center align-items-start">
-                    <img src="<?= base_url() ?>recursos/img/close.png" class="cerrar" alt="kanku">
+                    <img src="<?= base_url() ?>recursos/img/close.png" width="20" height="20" class="cerrar" alt="cerar">
 
                 </div>
             </div>
@@ -182,7 +184,7 @@
 
             <!-- div izquierdo ------------------------------------------------- -->
             <div class="kanji_izq col-2 d-md-flex justify-content-around flex-column">
-                <img src="<?= base_url() ?>recursos/img/letras-min.png" alt="kanji">
+                <img src="<?= base_url() ?>recursos/img/letras-min.png" width="80" height="292" alt="kanji">
 
             </div>
             <!-- fin div izquierdo ------------------------------------------------- -->
@@ -214,7 +216,7 @@
 
             <!-- div derecho ------------------------------------------------- -->
             <div class="kanji_drcho col-2 d-md-flex justify-content-around flex-column ">
-                <img src="<?= base_url() ?>recursos/img/letras-min.png" alt="kanji">
+                <img src="<?= base_url() ?>recursos/img/letras-min.png" width="80" height="292" alt="kanji">
 
 
             </div>
@@ -224,7 +226,7 @@
         <!-- fin de cuerpo -->
 
         <!-- pie de pagina ----------------------------------------------------------------------- -->
-        <footer>
+<!--         <footer>
 
             <div class="col-12 text-white pt-4 ">
 
@@ -257,13 +259,12 @@
         </footer>
 
         <a id="go-up" href="#contenedor">
-            <img src="<?= base_url() ?>recursos/img/down-arrow.png" alt="ir hacia arriba">
+            <img src="<?= base_url() ?>recursos/img/down-arrow.png" width="64" height="64" alt="ir hacia arriba">
         </a>
 
 
     </div>
-    <!-- ------------------------------------------------- -->
 
 </body>
 
-</html>
+</html> -->

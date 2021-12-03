@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -30,7 +30,7 @@
     <script src="<?= base_url() ?>recursos/js/jquery.animate-colors-min.js"></script>
     <script src="<?= base_url() ?>recursos/js/js.js"></script>
 
-</head>
+</head> -->
 
 <?php
 if (!isset($_SESSION['nombreSesion'])) {
@@ -48,7 +48,8 @@ if (!isset($_SESSION['nombreSesion'])) {
             <div class="col-xl-9 col-md-8 p-0">
 
                 <div class="d-flex align-items-center justify-content-center col-7 ml-auto">
-                    <img src="<?= base_url() ?>recursos/img/kanku-min.png" class="kanku" alt="kanku">
+                    <img src="<?= base_url() ?>recursos/img/kanku-min.png" width="32" height="32" class="kanku" alt="kanku">
+
                     <h1 class="font-weight-bolder">Dojo Kyoku</h1>
                 </div>
 
@@ -66,12 +67,12 @@ if (!isset($_SESSION['nombreSesion'])) {
             <div id="user" class="d-flex justify-content-start ml-xl-auto mr-xl-5 pt-1">
 
                 <div class="d-flex align-items-end" id="silueta-cont">
-                    <img src="<?= base_url() ?>recursos/img/Karate_silhouette.png" class="silueta" alt="silueta karate">
+                        <img src="<?= base_url() ?>recursos/img/Karate_silhouette-min.png" width="100" height="111" class="silueta" alt="silueta karate">
 
                 </div>
 
                 <div id="userIni" class="d-flex align-items-start h-25">
-                    <img src="<?= base_url() ?>recursos/img/user.png" class="user" alt="user">
+                    <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
                     <a href="<?= base_url() ?>TablaDatosController/listarTabla" class="font-weight-bold mt-2"><?= $_SESSION['nombreSesion'] ?></a>
 
                 </div>
@@ -82,11 +83,12 @@ if (!isset($_SESSION['nombreSesion'])) {
         <!-- ------------------------------------------------------------------------------------------------ -->
         <div class="cabecera_movil row mb-3">
             <div class="col-2 d-flex align-items-center">
-                <img src="<?= base_url() ?>recursos/img/menu.png" width="32" alt="menu">
+                <img src="<?= base_url() ?>recursos/img/menu.png" width="32" height="32" alt="menu">
             </div>
 
             <div class="d-flex align-items-center justify-content-center col-7 ">
-                <img src="<?= base_url() ?>recursos/img/kanku-min.png" class="kanku" alt="kanku">
+                <img src="<?= base_url() ?>recursos/img/kanku-min.png" width="32" height="32" class="kanku" alt="kanku">
+
                 <h4 class="font-weight-bolder">Dojo Kyoku</h4>
             </div>
 
@@ -98,7 +100,7 @@ if (!isset($_SESSION['nombreSesion'])) {
                     if ($_SESSION['tipo'] == "admin") {
                 ?>
                         <a href="<?= base_url() ?>TablaDatosController/listarTabla" class="font-weight-bold mt-2 ">
-                            <img src="<?= base_url() ?>recursos/img/user.png" class="user" alt="user">
+                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
                             <?= $_SESSION['nombreSesion'] ?></a>
 
                     <?php
@@ -106,7 +108,7 @@ if (!isset($_SESSION['nombreSesion'])) {
 
                     ?>
                         <a href="<?= base_url() ?>DojoController/cargarPag/misDatos" class="font-weight-bold mt-2">
-                            <img src="<?= base_url() ?>recursos/img/user.png" class="user" alt="user">
+                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
                             <?= $_SESSION['nombreSesion'] ?></a>
 
                     <?php
@@ -114,7 +116,7 @@ if (!isset($_SESSION['nombreSesion'])) {
                 } else {
                     ?>
                     <a href="<?= base_url() ?>DojoController/cargarPag/inicio_sesion" class="font-weight-bold">
-                        <img src="<?= base_url() ?>recursos/img/user.png" class="user" alt="user">
+                        <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
                     </a>
                 <?php
                 }
@@ -131,12 +133,12 @@ if (!isset($_SESSION['nombreSesion'])) {
                     <div class="d-flex align-items-center justify-content-center col-12 mb-4 ">
 
                         <h3 class="font-weight-bolder">Dojo Kyoku</h3>
-                        <img src="<?= base_url() ?>recursos/img/kankuLogo.png" class="kankulogo" alt="kanku">
+                        <img src="<?= base_url() ?>recursos/img/kankuLogo.png" width="32" height="32"  class="kankulogo" alt="kanku">
                     </div>
 
                 </div>
                 <div class="cerrar col-1 d-flex justify-content-center align-items-start">
-                    <img src="<?= base_url() ?>recursos/img/close.png" class="cerrar" alt="kanku">
+                    <img src="<?= base_url() ?>recursos/img/close.png" width="20" height="20" class="cerrar" alt="cerar">
 
                 </div>
             </div>
@@ -300,7 +302,7 @@ if (!isset($_SESSION['nombreSesion'])) {
         </footer>
 
         <a id="go-up" href="#contenedor">
-            <img src="<?= base_url() ?>recursos/img/down-arrow.png" alt="ir hacia arriba">
+            <img src="<?= base_url() ?>recursos/img/down-arrow.png" width="64" height="64" alt="ir hacia arriba">
         </a>
 
 
@@ -317,67 +319,67 @@ if (!isset($_SESSION['nombreSesion'])) {
 
                     <form class="d-flex flex-column align-items-center col-12" action="<?= base_url() ?>TablaDatosController/add_usuario" method="post">
 
-                    <label class="labEscritorio col-12" for="nombre">Nombre</label>
-                            <input type="text" class="mb-2 col-11" name="nombre" id="nombre" placeholder="nombre" value="<?php if (isset($_POST['nombre'])) echo $_POST['nombre'] ?>" required>
+                        <label class="labEscritorio col-12" for="nombre">Nombre</label>
+                        <input type="text" class="mb-2 col-11" name="nombre" id="nombre" placeholder="nombre" value="<?php if (isset($_POST['nombre'])) echo $_POST['nombre'] ?>" required>
 
-                            <label class="labEscritorio col-12" for="DNI">DNI</label>
-                            <input type="text" class="mb-2 col-11" name="DNI" id="DNI" pattern="(([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))" maxlength="9" placeholder="DNI" value="<?php if (isset($_POST['DNI'])) echo $_POST['DNI'] ?>" required>
-                            <?php
-                            if (isset($_SESSION['dni_no_valido'])) {
-                                echo "<span class='text-danger'>El número de DNI no es correcto</span>";
-                            }
-                            if (isset($_SESSION['dni_repetido'])) {
-                                echo "<span class='text-danger'>El DNI ya existe</span>";
-                            }
-                            ?>
-                            <label class="labEscritorio col-12" for="clave">Contraseña</label>
-                            <input class="mb-2 col-11" type="password" name="clave" id="clave" value="1234" placeholder="Contraseña" required>
+                        <label class="labEscritorio col-12" for="DNI">DNI</label>
+                        <input type="text" class="mb-2 col-11" name="DNI" id="DNI" pattern="(([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))" maxlength="9" placeholder="DNI" value="<?php if (isset($_POST['DNI'])) echo $_POST['DNI'] ?>" required>
+                        <?php
+                        if (isset($_SESSION['dni_no_valido'])) {
+                            echo "<span class='text-danger'>El número de DNI no es correcto</span>";
+                        }
+                        if (isset($_SESSION['dni_repetido'])) {
+                            echo "<span class='text-danger'>El DNI ya existe</span>";
+                        }
+                        ?>
+                        <label class="labEscritorio col-12" for="clave">Contraseña</label>
+                        <input class="mb-2 col-11" type="password" name="clave" id="clave" value="1234" placeholder="Contraseña" required>
 
-                            <label class="labEscritorio col-12" for="claveRep">Repita la contraseña</label>
+                        <label class="labEscritorio col-12" for="claveRep">Repita la contraseña</label>
 
-                            <input class="mb-2 col-11" type="password" name="claveRep" id="claveRep" value="1234" placeholder="Repita Contraseña" required>
+                        <input class="mb-2 col-11" type="password" name="claveRep" id="claveRep" value="1234" placeholder="Repita Contraseña" required>
 
-                            <?php
-                            if (isset($_SESSION['clavesIguales'])) {
-                                echo "<span class='text-danger'>Las claves tienen que ser iguales</span>";
-                            }
-                            ?>
-                            <label class="labEscritorio col-12" for="email">Email</label>
-                            <input class="mb-3 col-11" type="email" name="email" id="email" placeholder="Email" value="<?php if (isset($_POST['email'])) echo $_POST['email'] ?>" required>
+                        <?php
+                        if (isset($_SESSION['clavesIguales'])) {
+                            echo "<span class='text-danger'>Las claves tienen que ser iguales</span>";
+                        }
+                        ?>
+                        <label class="labEscritorio col-12" for="email">Email</label>
+                        <input class="mb-3 col-11" type="email" name="email" id="email" placeholder="Email" value="<?php if (isset($_POST['email'])) echo $_POST['email'] ?>" required>
 
-                            <div class="col-12 mb-3 d-flex pl-0">
-                                <label class="col-2 " for="edadR">Edad</label>
+                        <div class="col-12 mb-3 d-flex pl-0">
+                            <label class="col-2 " for="edadR">Edad</label>
 
-                                <select class="" name="edadR" id="edadR">
+                            <select class="" name="edadR" id="edadR">
 
-                                    <?php
-                                    for ($i = 10; $i <= 90; $i++) {
-                                    ?>
-                                        <option value="<?= $i ?>" <?php if (isset($_POST["edadR"]) && $_POST["edadR"] ==  $i) echo "selected"; ?>><?= $i ?></option>
-                                    <?php
-                                    }
-                                    ?>
-                                </select>
-                            </div>
+                                <?php
+                                for ($i = 10; $i <= 90; $i++) {
+                                ?>
+                                    <option value="<?= $i ?>" <?php if (isset($_POST["edadR"]) && $_POST["edadR"] ==  $i) echo "selected"; ?>><?= $i ?></option>
+                                <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
 
-                            <div class="col-12 mb-3 d-flex">
-                                <label><strong>Horario:</strong></label>
-                                <select class="ml-2 " name="horarioR" id="horarioR">
-                                    <option value="1" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "1") echo "selected"; ?>>10:00 a 11:00, 2 días 30€</option>
-                                    <option value="2" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "2") echo "selected"; ?>>11:30 a 12:30, 2 días 30€</option>
-                                    <option value="3" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "3") echo "selected"; ?>>17:00 a 18:00, 2 días 30€</option>
-                                    <option value="4" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "4") echo "selected"; ?>>18:15 a 19:15, 2 días 30€</option>
-                                    <option value="5" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "5") echo "selected"; ?>>19:30 a 20:30, 2 días 30€</option>
-                                    <option value="6" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "6") echo "selected"; ?>>10:00 a 11:00, 3 días 35€</option>
-                                    <option value="7" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "7") echo "selected"; ?>>11:30 a 12:30, 3 días 35€</option>
-                                    <option value="8" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "8") echo "selected"; ?>>17:00 a 18:00, 3 días 35€</option>
-                                    <option value="9" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "9") echo "selected"; ?>>18:15 a 19:15, 3 días 35€</option>
-                                    <option value="10" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "10") echo "selected"; ?>>19:30 a 20:30, 3 días 35€</option>
-                                </select>
+                        <div class="col-12 mb-3 d-flex">
+                            <label><strong>Horario:</strong></label>
+                            <select class="ml-2 " name="horarioR" id="horarioR">
+                                <option value="1" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "1") echo "selected"; ?>>10:00 a 11:00, 2 días 30€</option>
+                                <option value="2" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "2") echo "selected"; ?>>11:30 a 12:30, 2 días 30€</option>
+                                <option value="3" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "3") echo "selected"; ?>>17:00 a 18:00, 2 días 30€</option>
+                                <option value="4" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "4") echo "selected"; ?>>18:15 a 19:15, 2 días 30€</option>
+                                <option value="5" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "5") echo "selected"; ?>>19:30 a 20:30, 2 días 30€</option>
+                                <option value="6" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "6") echo "selected"; ?>>10:00 a 11:00, 3 días 35€</option>
+                                <option value="7" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "7") echo "selected"; ?>>11:30 a 12:30, 3 días 35€</option>
+                                <option value="8" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "8") echo "selected"; ?>>17:00 a 18:00, 3 días 35€</option>
+                                <option value="9" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "9") echo "selected"; ?>>18:15 a 19:15, 3 días 35€</option>
+                                <option value="10" <?php if (isset($_POST["horarioR"]) && $_POST["horarioR"] == "10") echo "selected"; ?>>19:30 a 20:30, 3 días 35€</option>
+                            </select>
 
-                            </div>
+                        </div>
 
-                            <!-- <div class="col-12 mb-3 d-flex">
+                        <!-- <div class="col-12 mb-3 d-flex">
                                 <p><strong>Horas a la semana:</strong></p>
 
                                 <select class="ml-auto" name="horSemana" id="horSemana">
@@ -386,16 +388,16 @@ if (!isset($_SESSION['nombreSesion'])) {
                                 </select>
                             </div> -->
 
-                            <div class="col-12 mb-3  ">
-                                <label class="labEscritorio" for="nCuenta">Número de cuenta</label>
-                                <input type="text" class="mb-2 ml-auto " name="nCuenta" id="nCuenta" placeholder="número de cuenta" value="<?php if (isset($_POST['nCuenta'])) echo $_POST['nCuenta'] ?>" required>
-                            </div>
+                        <div class="col-12 mb-3  ">
+                            <label class="labEscritorio" for="nCuenta">Número de cuenta</label>
+                            <input type="text" class="mb-2 ml-auto " name="nCuenta" id="nCuenta" placeholder="número de cuenta" value="<?php if (isset($_POST['nCuenta'])) echo $_POST['nCuenta'] ?>" required>
+                        </div>
 
-                            <p class="align-self-center mt-3">
-                                <!--  <input type="checkbox" name="terminos" id="privacidad">
+                        <p class="align-self-center mt-3">
+                            <!--  <input type="checkbox" name="terminos" id="privacidad">
                                 <label for="privacidad">Aceptar politica de privacidad</label> -->
-                            </p>
-                            <button type="submit" class="boton col-5  mb-3 align-self-center btn btn-danger">Enviar</button>
+                        </p>
+                        <button type="submit" class="boton col-5  mb-3 align-self-center btn btn-danger">Enviar</button>
 
                     </form>
                 </div>
@@ -477,7 +479,7 @@ if (!isset($_SESSION['nombreSesion'])) {
                             </select>
 
                         </div>
-                       
+
                         <div class="col-12 mb-3  ">
                             <label class="labEscritorio" for="nCuenta_edit">Número de cuenta</label>
                             <input type="text" class="mb-2 ml-auto " name="nCuenta_edit" id="nCuenta_edit" placeholder="número de cuenta" value="<?php if (isset($_POST['nCuenta_edit'])) echo $_POST['nCuenta_edit'] ?>" required>
@@ -519,60 +521,6 @@ if (!isset($_SESSION['nombreSesion'])) {
             </div>
         </div>
     </div>
-
-    <!-- -------------------------------------------------------------------------------------------------------- -->
-    <!-- ------------------------------------------------- -->
-
-
-
-    <script>
-        $(document).ready(function() {
-            $('#example').DataTable();
-
-            //funcion que recibe el id del usuario que se va a borrar, muestra el texto de confirmacion
-            //y inserta la url del metodo borrar al boton del modal
-            obtenerId = function(id) {
-                $("#confirmaBorrar").text("Esta seguro que desea borrar al usuario con id " + id);
-                $('#modalBorrar').attr('href', "<?= base_url() ?>TablaDatosController/borrar_usuario/" + id);
-
-            }
-
-            //funcion que recibe en el boton de editar(onclick) los valores del usuario, y los inserta en el formulario de editar
-            // y manda la url del metodo editar al boton del modal
-            obtenerDatos = function(id, nombre, DNI, email, edad, horario, numero_cuenta) {
-                $('#info_editar').text("Editando al usuario con id " + id);
-                $('#nombre_edit').val(nombre);
-                $('#DNI_edit').val(DNI);
-                /* $('#clave_edit').val(clave); */
-                $('#email_edit').val(email);
-                $('#nCuenta_edit').val(numero_cuenta);
-                $('#modalEditar').attr('action', "<?= base_url() ?>TablaDatosController/editar_usuario/" + id);
-
-                console.log(edad);
-
-               /*  if (edad <18) {
-
-                    $('#edad_edit').val(edad);
-
-                } else {
-
-                    $('#edad_edit').val('adulto');
-
-                } */
-                $("#edad_edit").val(edad);
-                $('#edad_edit').change();
-
-                $("#horario_edit").val(horario);
-                $('#horario_edit').change();
-
-                $("#horSemana_edit").val(horSemana);
-                $('#horSemana_edit').change();
-
-            }
-
-        });
-    </script>
-
 
 </body>
 
