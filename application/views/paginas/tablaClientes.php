@@ -1,37 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla clientes</title>
-
-    <link rel="stylesheet" href="<?= base_url() ?>recursos/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
-
-
-    <link rel="stylesheet" href="<?= base_url() ?>recursos/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= base_url() ?>recursos/css/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,900;1,100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,900;1,100;1,300&display=swap" rel="stylesheet">
-
-
-    <script src="<?= base_url() ?>recursos/js/popper.min.js"></script>
-    <script src="<?= base_url() ?>recursos/js/bootstrap.min.js"></script>
-    <script src="<?= base_url() ?>recursos/js/jquery.animate-colors-min.js"></script>
-    <script src="<?= base_url() ?>recursos/js/js.js"></script>
-
-</head> -->
-
 <?php
 if (!isset($_SESSION['nombreSesion'])) {
     redirect("DojoController", "location");
@@ -67,12 +33,12 @@ if (!isset($_SESSION['nombreSesion'])) {
             <div id="user" class="d-flex justify-content-start ml-xl-auto mr-xl-5 pt-1">
 
                 <div class="d-flex align-items-end" id="silueta-cont">
-                        <img src="<?= base_url() ?>recursos/img/Karate_silhouette-min.png" width="100" height="111" class="silueta" alt="silueta karate">
+                    <img src="<?= base_url() ?>recursos/img/Karate_silhouette-min.png" width="100" height="111" class="silueta" alt="silueta karate">
 
                 </div>
 
                 <div id="userIni" class="d-flex align-items-start h-25">
-                    <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
+                    <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32" class="user" alt="user">
                     <a href="<?= base_url() ?>TablaDatosController/listarTabla" class="font-weight-bold mt-2"><?= $_SESSION['nombreSesion'] ?></a>
 
                 </div>
@@ -100,7 +66,7 @@ if (!isset($_SESSION['nombreSesion'])) {
                     if ($_SESSION['tipo'] == "admin") {
                 ?>
                         <a href="<?= base_url() ?>TablaDatosController/listarTabla" class="font-weight-bold mt-2 ">
-                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
+                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32" class="user" alt="user">
                             <?= $_SESSION['nombreSesion'] ?></a>
 
                     <?php
@@ -108,7 +74,7 @@ if (!isset($_SESSION['nombreSesion'])) {
 
                     ?>
                         <a href="<?= base_url() ?>DojoController/cargarPag/misDatos" class="font-weight-bold mt-2">
-                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
+                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32" class="user" alt="user">
                             <?= $_SESSION['nombreSesion'] ?></a>
 
                     <?php
@@ -116,7 +82,7 @@ if (!isset($_SESSION['nombreSesion'])) {
                 } else {
                     ?>
                     <a href="<?= base_url() ?>DojoController/cargarPag/inicio_sesion" class="font-weight-bold">
-                        <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
+                        <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32" class="user" alt="user">
                     </a>
                 <?php
                 }
@@ -133,7 +99,7 @@ if (!isset($_SESSION['nombreSesion'])) {
                     <div class="d-flex align-items-center justify-content-center col-12 mb-4 ">
 
                         <h3 class="font-weight-bolder">Dojo Kyoku</h3>
-                        <img src="<?= base_url() ?>recursos/img/kankuLogo.png" width="32" height="32"  class="kankulogo" alt="kanku">
+                        <img src="<?= base_url() ?>recursos/img/kankuLogo.png" width="32" height="32" class="kankulogo" alt="kanku">
                     </div>
 
                 </div>
@@ -521,7 +487,59 @@ if (!isset($_SESSION['nombreSesion'])) {
             </div>
         </div>
     </div>
+    <script src="<?= base_url() ?>recursos/js/js.js"></script>
 
 </body>
 
 </html>
+
+<script>
+    $(document).ready(function() {
+
+        /* Tabla de clientes */
+        /* ---------------------------------------------------------------------- */
+
+        $('#example').DataTable();
+
+        //funcion que recibe el id del usuario que se va a borrar, muestra el texto de confirmacion
+        //y inserta la url del metodo borrar al boton del modal
+        obtenerId = function(id) {
+            $("#confirmaBorrar").text("Esta seguro que desea borrar al usuario con id " + id);
+            $('#modalBorrar').attr('href', "<?= base_url() ?>TablaDatosController/borrar_usuario/" + id);
+
+        }
+
+        //funcion que recibe en el boton de editar(onclick) los valores del usuario, y los inserta en el formulario de editar
+        // y manda la url del metodo editar al boton del modal
+        obtenerDatos = function(id, nombre, DNI, email, edad, horario, numero_cuenta) {
+            $('#info_editar').text("Editando al usuario con id " + id);
+            $('#nombre_edit').val(nombre);
+            $('#DNI_edit').val(DNI);
+            /* $('#clave_edit').val(clave); */
+            $('#email_edit').val(email);
+            $('#nCuenta_edit').val(numero_cuenta);
+            $('#modalEditar').attr('action', "<?= base_url() ?>TablaDatosController/editar_usuario/" + id);
+
+            console.log(edad);
+
+            /*  if (edad <18) {
+ 
+         $('#edad_edit').val(edad);
+ 
+     } else {
+ 
+         $('#edad_edit').val('adulto');
+ 
+     } */
+            $("#edad_edit").val(edad);
+            $('#edad_edit').change();
+
+            $("#horario_edit").val(horario);
+            $('#horario_edit').change();
+
+            $("#horSemana_edit").val(horSemana);
+            $('#horSemana_edit').change();
+
+        }
+    });
+</script>
