@@ -21,12 +21,12 @@ body {
     display: flex;
 }
 
-html, body{
+html, body {
     height: 100%;
 }
 
 
-.container-xl{
+.container-xl {
     display: flex;
     height: 100%;
     flex-flow: column;
@@ -36,6 +36,7 @@ html, body{
     border-bottom: 2px solid #dc3545;
 }
 
+/* Icono de inicio de sesion */
 .justify-content-start>div:nth-child(2) {
     cursor: pointer;
 }
@@ -45,41 +46,48 @@ div.cabecera_escritorio div#user div#userIni a {
     text-decoration: none;
 }
 
+/* quitamos la cabecera de movil en la vista de escritorio */
 .cabecera_movil {
     display: none;
 }
 
+/*color y posicionamiento del menu de la vista de movil */
 #menu {
     display: none;
     /*d-none*/
     color: black;
     left: 0;
     top: 0;
-    height: 100vh;
+    height: 100rem;
+    width: 100%;
     background: #ECE9E9;
     transition-duration: 1s;
-    height: 100vh;
     z-index: 100;
 }
 
+/*color de el titulo DojoKyoku en el menu movil */
 .logo-menu-movil>div:nth-child(1)>h3 {
     color: #dc3545;
 }
 
+/* tamaño del logo en el menu movil */
 .kankulogo {
     width: 33px;
 }
 
+/* tamaño y posicionamiento del icono cerrar del menu movil */
 img.cerrar {
     margin-top: 0.4rem;
     width: 20px;
     cursor: pointer;
 }
 
-div.cabecera_movil img {
+/* icono de menu hamburguesa */
+body>div>div.cabecera_movil.row.mb-3>div:nth-child(1)>img {
     cursor: pointer;
 }
 
+/* tamaño y color a el navegador del menu de movil */
 #lista-menu li a {
     color: black;
     font-size: 1.5rem;
@@ -87,14 +95,25 @@ div.cabecera_movil img {
     font-weight: 500;
 }
 
+/* tamaño al logo de la cabecera */
 .kanku {
-    width: 32px;
+    width: 35px;
+    height: 35px;
+    align-self: center;
 }
 
+/* alineamos el texto dojoKyioku de la cabecera con el logo */
+body>div>div.cabecera_escritorio.row.mb-4>div.col-xl-9.col-md-8.p-0>div>h1 {
+    margin-top: 0.3rem;
+
+}
+
+/* tamaño  de la silueta del karateca  */
 .silueta {
     width: 100px;
 }
 
+/* tamaño y alineacion del icono user */
 .user {
     width: 29px;
     height: 28px;
@@ -106,53 +125,54 @@ div.cabecera_movil img {
 /* ----------------------------------------------------------------- */
 
 /* tamaño del carrousel */
-
-#carousel-controles-indicadores  div {
+#carousel-controles-indicadores div {
     height: auto;
 }
 
 /* color de fondo del div del texto */
-
 .historia, .palabra, .horario, .contacto, .nosotros {
     background-color: #ECE9E9;
 }
 
 /* da tamaño a los kanjis */
-
 .kanji_izq img, .kanji_drcho img {
     width: 5rem;
 }
 
 /* alinea en el centro en kanji derecho */
-
 .kanji_drcho {
     align-items: flex-end;
 }
 
+/* tamaño y decoración del enlace, debajo de la foto de ojama en la historia */
 .text-dark {
     font-size: 0.7rem;
     text-decoration: underline;
 }
 
+/*  color del pie de página */
 footer {
     background-color: #3D3B3B;
-    margin-top: 5rem;
 }
 
+/* le damos flexibilidad a los divs del pie de página */
 footer div {
     /* background-color: #3D3B3B; */
     display: flex;
 }
 
+/* tamaño del logo del pie de página */
 h3>img:nth-child(1) {
     width: 50px;
 }
 
+/* posicionamiento de la dirección del del dojo en el pie de página */
 div.col-sm-12:nth-child(2) {
     margin-left: -5rem;
     margin-right: 4em;
 }
 
+/* posicionamiento del logo volver arriba */
 a#go-up {
     position: fixed;
     right: 0.5rem;
@@ -164,8 +184,9 @@ a#go-up {
 
 /* ----------------------------------------------------------------- */
 
-/* pagina horario */
+/* página horario */
 
+/* tamaño y posicionamiento del horario */
 div.horario div div p {
     font-weight: 500;
     margin-bottom: 0;
@@ -173,8 +194,9 @@ div.horario div div p {
 
 /* ----------------------------------------------------------------- */
 
-/* pagina contacto */
+/* página contacto */
 
+/* ocultamos el placeholder del formulario en la version de escritorio */
 input::placeholder, textarea::placeholder {
     color: transparent;
 }
@@ -185,73 +207,86 @@ input::placeholder, textarea::placeholder {
 
 /* ----------------------------------------------------------------- */
 
-/* pagina inicio sesion */
+/* página inicio sesion */
 
+/*posicionamiento y tamaño del placeholder  */
 input::placeholder {
     text-align: center;
     font-weight: bold;
 }
 
+/*color y decoración de los enlaces del formulario  */
 .text_enlace {
-    /* color: rgba(0, 0, 0, 0.945); */
     color: black;
     text-decoration: none;
 }
 
 /* ----------------------------------------------------------------- */
 
-/* pagina tablaClientes */
+/* página tablaClientes */
 
+/* tamaño fijo de la tabla de clientes */
 #tabladatosContainer {
-
     width: 1388px;
 }
 
-
-
-
+/* parte tablet */
 @media (max-width: 768px) {
+
+    /* ocultamos la cabecera de escritorio */
     .cabecera_escritorio {
         display: none;
     }
+
+    /* mostramos la cabecera movil */
     .cabecera_movil {
         display: flex;
-        
+
     }
-  
+
+    /* ponemos el foter en columna */
     footer div {
         flex-flow: column;
     }
+
+    /* posicionamiento de la dirección en el footer */
     div.col-sm-12:nth-child(2) {
         margin-left: 0;
         margin-right: 0;
     }
+
+    /* ocultamos los kanjis de los lados de la página para la versión de movil */
     .kanji_izq, .kanji_drcho {
         display: none;
     }
+
     /* fin de home */
     .labEscritorio {
         visibility: hidden;
     }
+
+    /* color del placeholder en la página contacto */
     input::placeholder, textarea::placeholder {
-        color: #3D3B3B
+        color: #3D3B3B;
     }
 }
 
-/* version de movil */
+/* versión de movil */
 @media (max-width: 553px) {
+
+    /* ponemos en columna el horario en la página misDatos */
     .formisDatos {
         flex-flow: column;
     }
 
     /* margin al label edad en registro.php */
-    div#contenedor.cuerpo.m-auto.p-0.d-flex.align-items-stretch div.centro.col-md-8.mb-4 div.contacto.col-12.p-3.text-center.font-weight-bold div.col-12.m-auto.mb-3.text-left form.d-flex.flex-column.align-items-center.col-12 div.col-12.mb-3.d-flex.pl-0 label.edadR.col-2{
+    div#contenedor.cuerpo.m-auto.p-0.d-flex.align-items-stretch div.centro.col-md-8.mb-4 div.contacto.col-12.p-3.text-center.font-weight-bold div.col-12.m-auto.mb-3.text-left form.d-flex.flex-column.align-items-center.col-12 div.col-12.mb-3.d-flex.pl-0 label.edadR.col-2 {
         margin-right: 2rem;
     }
 
     /* pone el select horario de bajo del texto, para que no se salga */
-    div.col-12:nth-child(12){
+    div.col-12:nth-child(12) {
         flex-flow: column;
     }
-    
+
 }

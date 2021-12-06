@@ -144,7 +144,7 @@
                     <div class="d-flex align-items-center justify-content-center col-12 mb-4 ">
 
                         <h3 class="font-weight-bolder">Dojo Kyoku</h3>
-                        <img src="<?= base_url() ?>recursos/img/kankuLogo.png" width="32" height="32" class="kankulogo" alt="kanku">
+                        <img src="<?= base_url() ?>recursos/img/kankuLogo.png" width="33" height="32" class="kankulogo" alt="kanku">
                     </div>
 
                 </div>
