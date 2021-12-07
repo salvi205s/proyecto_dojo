@@ -30,13 +30,14 @@ class LoginController extends CI_Controller
 
             //llamamos al metodo loginUser, para obtener los datos del usuario logueado
             $userLog = $this->LoginModel->loginUser($nombre, $clave);
+            $nombreSesion = explode(" ", $nombre);
 
             //si loginUser es correcto, guardamos los datos del cliente en un array, para mostrarlos en mis datos
             if ($userLog) {
 
                 $datosSesion = array(
                     "usuario" => $userLog[0]->nombre,
-                    "nombreSesion" => $nombre,
+                    "nombreSesion" => $nombreSesion[0],
                     "DNI" => $userLog[0]->DNI,
                     "email" => $userLog[0]->email,
                     "edad" => $userLog[0]->edad,

@@ -113,9 +113,7 @@ if (!isset($_SESSION['nombreSesion'])) {
 
                 </div>
             </div>
-
-
-
+            
             <div class="menu-movil ml-5">
 
                 <ul id="lista-menu" class="list-unstyled ">

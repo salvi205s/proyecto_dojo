@@ -60,8 +60,8 @@
                     <?php
 
                     if (isset($_SESSION['nombreSesion'])) {
+                        if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == "admin") {
 
-                        if ($_SESSION['tipo'] == "admin") {
                     ?>
                             <a href="<?= base_url() ?>TablaDatosController/listarTabla" class="font-weight-bold mt-2 ">
                                 <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32" class="user" alt="user">

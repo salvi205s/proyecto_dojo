@@ -32,6 +32,10 @@ html, body {
     flex-flow: column;
 }
 
+#container_registro{
+    width: 1100px;
+}
+
 .cabecera_escritorio {
     border-bottom: 2px solid #dc3545;
 }

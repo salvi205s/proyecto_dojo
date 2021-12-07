@@ -40,8 +40,8 @@
 
                     if (isset($_SESSION['nombreSesion'])) {
 
-                        if ($_SESSION['tipo'] == "admin") {
-                    ?>
+                        if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == "admin") {
+                            ?>
                             <a href="<?= base_url() ?>TablaDatosController/listarTabla" class="font-weight-bold mt-2 ">
                                 <img src="<?= base_url() ?>recursos/img/user.png" class="user mb-3" alt="user">
                                 <?= $_SESSION['nombreSesion'] ?></a>

@@ -1,7 +1,7 @@
 
 <body>
 
-    <div class="container-fluid m-auto">
+    <div class="container-fluid m-auto" style="max-width: 1100px;">
 
 
         <div class="cabecera_escritorio row mb-4">

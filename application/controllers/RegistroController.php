@@ -85,11 +85,12 @@ class RegistroController extends CI_Controller
 
         //logueamos al cliente...
         $userLog = $this->LoginModel->loginUser($nombre, $clave);
-
+        $nombreSesion = explode(" ", $nombre);
+        
         //guardamos sus datos en una array...
         $datosSesion = array(
           "usuario" => $userLog[0]->nombre,
-          "nombreSesion" => $nombre,
+          "nombreSesion" => $nombreSesion[0],
           "DNI" => $this->input->post('DNI'),
           "email" => $this->input->post('email'),
           "edad" => $this->input->post('edadR'),

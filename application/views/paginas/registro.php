@@ -2,7 +2,7 @@
 
 <body>
 
-    <div class="container-fluid m-auto">
+    <div class="container-fluid m-auto" style="max-width: 1100px;">
 
         <div class="cabecera_escritorio row mb-4">
 
@@ -111,7 +111,7 @@
             <!-- fin div izquierdo ------------------------------------------------- -->
 
             <!-- div centro ------------------------------------------------- -->
-            <div class="centro col-md-8 mb-4">
+            <div class="centro col-md-8 col-lg-8 mb-4">
 
                 <!-- contacto -->
                 <div class="contacto col-12 p-3 text-center font-weight-bold ">
@@ -147,11 +147,11 @@
                             }
                             ?>
                             <label class="labEscritorio col-12" for="clave">Contraseña</label>
-                            <input class="mb-2 col-11" type="password" name="clave" id="clave" value="1234" placeholder="Contraseña" required>
+                            <input class="mb-2 col-11" type="password" name="clave" id="clave" placeholder="Contraseña" required>
 
                             <label class="labEscritorio col-12" for="claveRep">Repita la contraseña</label>
 
-                            <input class="mb-2 col-11" type="password" name="claveRep" id="claveRep" value="1234" placeholder="Repita Contraseña" required>
+                            <input class="mb-2 col-11" type="password" name="claveRep" id="claveRep" placeholder="Repita Contraseña" required>
 
                             <?php
                             if (isset($_SESSION['clavesIguales'])) {
