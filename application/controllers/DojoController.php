@@ -7,7 +7,7 @@ class DojoController extends CI_Controller
 	//metodo que se inicia por defecto
 	public function index()
 	{
-		 $this->load->view('head');
+		/*  $this->load->view('head'); */
 		$this->cargarPag('home');
 	}
 

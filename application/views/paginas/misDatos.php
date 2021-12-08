@@ -76,8 +76,8 @@ if (!isset($_SESSION['nombreSesion'])) {
                     } else {
 
                     ?>
-                        <a href="<?= base_url() ?>DojoController/cargarPagMisDatos/misDatos" class="font-weight-bold mt-2 bg-primary">
-                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32" class="user " alt="user">
+                        <a href="<?= base_url() ?>DojoController/cargarPagMisDatos/misDatos" class="font-weight-bold mt-2">
+                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32" class="user" alt="user">
                             <?= $_SESSION['nombreSesion'] ?></a>
 
                     <?php
