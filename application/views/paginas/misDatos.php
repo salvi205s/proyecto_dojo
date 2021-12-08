@@ -1,4 +1,3 @@
-
 <?php
 if (!isset($_SESSION['nombreSesion'])) {
     redirect("DojoController", "location");
@@ -7,15 +6,14 @@ if (!isset($_SESSION['nombreSesion'])) {
 
 <body>
 
-    <div class="container-xl m-auto">
-
+    <div class="container-xl m-auto bg-warning">
 
         <div class="cabecera_escritorio row mb-4">
 
             <div class="col-xl-9 col-md-8 p-0">
 
                 <div class="d-flex align-items-center justify-content-center col-7 ml-auto">
-                                        <img src="<?= base_url() ?>recursos/img/kanku-min.png" width="32" height="32" class="kanku" alt="kanku">
+                    <img src="<?= base_url() ?>recursos/img/kanku-min.png" width="32" height="32" class="kanku" alt="kanku">
 
                     <h1 class="font-weight-bolder">Dojo Kyoku</h1>
                 </div>
@@ -40,7 +38,7 @@ if (!isset($_SESSION['nombreSesion'])) {
 
                 <div id="userIni" class="d-flex align-items-start h-25">
                     <a href="<?= base_url() ?>DojoController/cargarPagMisDatos/misDatos" class="font-weight-bold mt-2">
-                        <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
+                        <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32" class="user" alt="user">
                         <?= $_SESSION['nombreSesion'] ?>
                     </a>
 
@@ -57,7 +55,7 @@ if (!isset($_SESSION['nombreSesion'])) {
             </div>
 
             <div class="d-flex align-items-center justify-content-center col-7 ">
-                                    <img src="<?= base_url() ?>recursos/img/kanku-min.png" width="32" height="32" class="kanku" alt="kanku">
+                <img src="<?= base_url() ?>recursos/img/kanku-min.png" width="32" height="32" class="kanku" alt="kanku">
 
                 <h4 class="font-weight-bolder">Dojo Kyoku</h4>
             </div>
@@ -71,7 +69,7 @@ if (!isset($_SESSION['nombreSesion'])) {
                     if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == "admin") {
                 ?>
                         <a href="<?= base_url() ?>TablaDatosController/listarTabla" class="font-weight-bold mt-2 ">
-                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
+                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32" class="user" alt="user">
                             <?= $_SESSION['nombreSesion'] ?></a>
 
                     <?php
@@ -79,7 +77,7 @@ if (!isset($_SESSION['nombreSesion'])) {
 
                     ?>
                         <a href="<?= base_url() ?>DojoController/cargarPagMisDatos/misDatos" class="font-weight-bold mt-2">
-                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
+                            <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32" class="user" alt="user">
                             <?= $_SESSION['nombreSesion'] ?></a>
 
                     <?php
@@ -87,7 +85,7 @@ if (!isset($_SESSION['nombreSesion'])) {
                 } else {
                     ?>
                     <a href="<?= base_url() ?>DojoController/cargarPag/inicio_sesion" class="font-weight-bold">
-                        <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32"  class="user" alt="user">
+                        <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32" class="user" alt="user">
                     </a>
                 <?php
                 }
@@ -104,7 +102,7 @@ if (!isset($_SESSION['nombreSesion'])) {
                     <div class="d-flex align-items-center justify-content-center col-12 mb-4 ">
 
                         <h3 class="font-weight-bolder">Dojo Kyoku</h3>
-                        <img src="<?= base_url() ?>recursos/img/kankuLogo.png" width="32" height="32"  class="kankulogo" alt="kanku">
+                        <img src="<?= base_url() ?>recursos/img/kankuLogo.png" width="32" height="32" class="kankulogo" alt="kanku">
                     </div>
 
                 </div>
@@ -113,7 +111,7 @@ if (!isset($_SESSION['nombreSesion'])) {
 
                 </div>
             </div>
-            
+
             <div class="menu-movil ml-5">
 
                 <ul id="lista-menu" class="list-unstyled ">
@@ -149,6 +147,9 @@ if (!isset($_SESSION['nombreSesion'])) {
                 <!-- contacto -->
                 <div class="contacto col-12 p-3 text-center font-weight-bold ">
 
+                <?php
+    print_r($_SESSION);
+                ?>
                     <p class="font-weight-bold">Mis datos</p>
                     <?php
                     if (isset($_SESSION['mensaje'])) {
@@ -182,7 +183,7 @@ if (!isset($_SESSION['nombreSesion'])) {
                                     $dias = 3;
                                 }
                                 if (isset($_SESSION['horario'])) {
-                                    echo "<p class='font-weight-normal'>" . $_SESSION['horario'] . ", $dias a la semana</p>";
+                                    echo "<p class='font-weight-normal'>" . $_SESSION['horario'] . ", $dias días a la semana</p>";
                                     unset($_SESSION['mensaje']);
                                 }
 
@@ -262,4 +263,3 @@ if (!isset($_SESSION['nombreSesion'])) {
 
         </div>
         <!-- fin de cuerpo -->
-

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dojo Kyoku</title>
-
+    <link rel="shortcut icon" type="image/png" href="<?= base_url() ?>recursos/img/kanku-min.png" />
     <!-- <link rel="stylesheet" href="<?= base_url() ?>recursos/css/style.css"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"> -->
     <link rel="stylesheet" href="<?= base_url() ?>recursos/css/bootstrap.css">

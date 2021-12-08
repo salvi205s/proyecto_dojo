@@ -3,23 +3,21 @@ $(document).ready(function () {
     /* desplegar menu hamburguesa  */
     $(".cabecera_movil > div:nth-child(1) > img:nth-child(1)").click(function (e) {
 
-
-
         $("#menu").css({ "display": "block" });
-        $("#menu").stop().animate({ "left": "0" }, 500);
-        $("body").css({ "overflow": "hidden" });
+        $("#menu").stop().css({ "left": "0" }, 500);
 
     });
 
     /* crrear el menu de movil */
     $("img.cerrar").click(function (e) {
 
-        $("#menu").stop().animate({ "left": "-100vw" }, 500);
-        $("body").css({ "overflow": "scroll" });
+        $("#menu").stop().css({ "left": "-200vw" }, 500);
 
     });
 
+    /* ------------------------------------------------------------------------ */
 
+    /* flecha volver arriba */
     $(window).scroll(function () {
 
         if ($(window).scrollTop() > 1) {
@@ -43,7 +41,32 @@ $(document).ready(function () {
         }
     });
 
+    /* ------------------------------------------------------------------------------ */
+    //cabecera fija
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 5) {
 
+            $('div.cabecera_movil').css({
+                "position": "fixed",
+                "width": "100%",
+                "opacity": "0.9",
+                "z-index": "100"
+            });
+
+
+        } else if ($(window).scrollTop() === 0) {
+
+            $('div.cabecera_movil').css({
+                "position": "static",
+                "opacity": "1",
+                "background":"red",
+                "width": "105%",
+
+
+            });
+
+        }
+    });
 
 
 

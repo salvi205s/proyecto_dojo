@@ -2,8 +2,7 @@
 
 <body>
 
-    <div class="container-xl m-auto">
-
+<div class="container-fluid m-auto" style="max-width: 1100px;">
 
         <div class="cabecera_escritorio row mb-4">
 
@@ -113,7 +112,6 @@
                 }
                 ?>
             </div>
-        </div>
 
         <!-- menu movil -->
         <!-- ------------------------------------------------------------- -->
@@ -154,6 +152,7 @@
             </div>
         </div>
         <!-- ------------------------------------------------------------- -->
+        </div>
 
         <!-- cuerpo -->
         <div id="contenedor" class="cuerpo m-auto p-0 d-flex align-items-stretch">

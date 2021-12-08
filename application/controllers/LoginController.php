@@ -52,9 +52,9 @@ class LoginController extends CI_Controller
 
                 //guardamos el array como variables de sesion
                 $this->session->set_userdata($datosSesion);
-
+           
                 //si el tipo es admin, se carga la vista tablaclientes y se le pasa la funcion listar, para cargar la tabla de clientes
-                if ($tipo == "admin") {
+                if ($_SESSION['tipo'] == "admin") {
 
                     $this->load->model("TablaDatosModel");
 
@@ -91,7 +91,7 @@ class LoginController extends CI_Controller
         } else {
 
             //si existe la sesion de usuario y el tipo es admin, carga la vista admin, si es lo contrario carga la vista misDatos, y si no carga el inicio
-            if (isset($_SESSION['usuario']) && $_SESSION['tipo'] === "admin") {
+            if (isset($_SESSION['nombreSesion']) && isset($_SESSION['tipo']) && $_SESSION['tipo'] === "admin") {
                 $this->load->model("TablaDatosModel");
                 $data['listaClients'] = $this->TablaDatosModel->listar();
 

@@ -25,7 +25,6 @@ html, body {
     height: 100%;
 }
 
-
 .container-xl {
     display: flex;
     height: 100%;
@@ -62,11 +61,12 @@ div.cabecera_escritorio div#user div#userIni a {
     color: black;
     left: 0;
     top: 0;
-    height: 100rem;
+  
     width: 100%;
     background: #ECE9E9;
     transition-duration: 1s;
     z-index: 100;
+    border: 2px solid black;
 }
 
 /*color de el titulo DojoKyoku en el menu movil */
