@@ -59,9 +59,7 @@ $(document).ready(function () {
             $('div.cabecera_movil').css({
                 "position": "static",
                 "opacity": "1",
-                "background":"red",
-                "width": "105%",
-
+                "width": "106%",
 
             });
 

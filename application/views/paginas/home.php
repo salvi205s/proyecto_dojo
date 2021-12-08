@@ -66,7 +66,7 @@
         </div>
         <!-- fin de cabecera_escritorio -->
         <!-- ------------------------------------------------------------------------------------------------ -->
-        <div class="cabecera_movil row mb-3 bg-warning pt-2 ">
+        <div class="cabecera_movil row mb-3 pt-2 ">
             <div class="col-2 d-flex align-items-center">
                 <img src="<?= base_url() ?>recursos/img/menu.png" width="32" height="32" alt="menu">
             </div>
@@ -76,7 +76,7 @@
                 <h4 class="font-weight-bolder">Dojo Kyoku</h4>
             </div>
 
-            <div class="col-2 d-flex align-items-center justify-content-end ml-auto bg-danger">
+            <div class="col-2 d-flex align-items-center justify-content-end ml-auto">
                 <?php
 
                 if (isset($_SESSION['nombreSesion'])) {
@@ -99,7 +99,7 @@
                     }
                 } else {
                     ?>
-                    <a href="<?= base_url() ?>DojoController/cargarPag/inicio_sesion" class="font-weight-bold bg-primary">
+                    <a href="<?= base_url() ?>DojoController/cargarPag/inicio_sesion" class="font-weight-bold">
                         <img src="<?= base_url() ?>recursos/img/user.png" width="32" height="32" class="user" alt="user">
                     </a>
                 <?php

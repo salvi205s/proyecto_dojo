@@ -49,7 +49,7 @@ if (!isset($_SESSION['nombreSesion'])) {
         </div>
         <!-- fin de cabecera_escritorio -->
         <!-- ------------------------------------------------------------------------------------------------ -->
-        <div class="cabecera_movil row mb-3">
+        <div class="cabecera_movil row mb-3 pt-2 ">
             <div class="col-2 d-flex align-items-center">
                 <img src="<?= base_url() ?>recursos/img/menu.png" width="32" height="32" alt="menu">
             </div>
@@ -147,9 +147,6 @@ if (!isset($_SESSION['nombreSesion'])) {
                 <!-- contacto -->
                 <div class="contacto col-12 p-3 text-center font-weight-bold ">
 
-                <?php
-    print_r($_SESSION);
-                ?>
                     <p class="font-weight-bold">Mis datos</p>
                     <?php
                     if (isset($_SESSION['mensaje'])) {
