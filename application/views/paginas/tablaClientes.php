@@ -30,7 +30,7 @@ if (!isset($_SESSION['nombreSesion'])) {
                 </nav>
             </div>
 
-            <div id="user" class="d-flex justify-content-start ml-xl-auto mr-xl-5 pt-1">
+            <div id="user" class="d-flex justify-content-start ml-xl-auto mr-xl-4 pt-1">
 
                 <div class="d-flex align-items-end" id="silueta-cont">
                     <img src="<?= base_url() ?>recursos/img/Karate_silhouette-min.png" width="100" height="111" class="silueta" alt="silueta karate">
@@ -152,7 +152,7 @@ if (!isset($_SESSION['nombreSesion'])) {
                     </span>
 
 
-                    <table id="example" class="table table-striped table-bordered table-responsive nowrap " style="width:100%">
+                    <table id="tabla" class="table table-striped table-bordered table-responsive nowrap " style="width:100%">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -499,7 +499,28 @@ if (!isset($_SESSION['nombreSesion'])) {
         /* Tabla de clientes */
         /* ---------------------------------------------------------------------- */
 
-        $('#example').DataTable();
+        $('#tabla').DataTable({
+            language: {
+                "decimal": "",
+                "emptyTable": "No hay información",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+                "infoEmpty": "Mostrando 0 de 0 de 0 Entradas",
+                "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Mostrar _MENU_ Entradas",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscar:",
+                "zeroRecords": "Sin resultados encontrados",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Ultimo",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                }
+            }
+        });
 
         //funcion que recibe el id del usuario que se va a borrar, muestra el texto de confirmacion
         //y inserta la url del metodo borrar al boton del modal

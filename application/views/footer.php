@@ -1,5 +1,5 @@
         <!-- pie de pagina ----------------------------------------------------------------------- -->
-        <footer>
+        <footer class="mt-auto">
 
             <div class="col-12 text-white pt-4 ">
 

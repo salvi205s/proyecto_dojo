@@ -17,7 +17,7 @@ a {
 }
 
 body {
-    margin-bottom: -2rem;
+    
     display: flex;
 }
 
@@ -25,10 +25,12 @@ html, body {
     height: 100%;
 }
 
-.container-xl {
+.container-fluid {
     display: flex;
     height: 100%;
     flex-flow: column;
+    max-width: 1100px;
+
 }
 
 #container_registro{

@@ -1,7 +1,6 @@
 <body>
 
-    <div class="container-xl m-auto">
-
+    <div class="container-fluid">
 
         <div class="cabecera_escritorio row mb-4">
 
@@ -24,7 +23,7 @@
                 </nav>
             </div>
 
-            <div id="user" class="d-flex justify-content-start ml-xl-auto mr-xl-5 pt-1">
+            <div id="user" class="d-flex justify-content-start ml-xl-auto mr-xl-4 pt-1">
 
                 <div class="d-flex align-items-end" id="silueta-cont">
                     <img src="<?= base_url() ?>recursos/img/Karate_silhouette-min.png" width="100" height="111" class="silueta" alt="silueta karate">
@@ -102,7 +101,7 @@
         </div>
 
         <!-- cuerpo -->
-        <div id="contenedor" class="cuerpo m-auto p-0 d-flex align-items-stretch">
+        <div id="contenedor" class="cuerpo p-0 d-flex ">
 
             <!-- div izquierdo ------------------------------------------------- -->
             <div class="kanji_izq col-2 d-md-flex justify-content-around flex-column">
