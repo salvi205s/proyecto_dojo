@@ -209,8 +209,9 @@
                     <iframe id="inlineFrameExample" title="Inline Frame Example" width="0" height="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d130613279.7980936!2d-100.64509145647183!3d-2.5065518346153697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb09dff882a7809e1%3A0xb08d0a385dc8c7c7!2sAnt%C3%A1rtida!5e0!3m2!1ses!2ses!4v1607345230155!5m2!1ses!2ses">
                     </iframe>
 
-                    <iframe class="embed-responsive mt-3 h-50" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d130613279.7980936!2d-100.64509145647183!3d-2.5065518346153697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb09dff882a7809e1%3A0xb08d0a385dc8c7c7!2sAnt%C3%A1rtida!5e0!3m2!1ses!2ses!4v1607345230155!5m2!1ses!2ses" width="600" height="250" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-
+                    <iframe class="embed-responsive mt-3 h-50" 
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1605.1240986352943!2d-5.156231951302701!3d36.427380748582955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAv.%20Juan%20Carlos%20I%20n%C2%BA26%2029680%2C%20M%C3%A1laga%2C%20Estepona!5e0!3m2!1ses!2ses!4v1639589974368!5m2!1ses!2ses" 
+                    width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </iframe>
 
                 </div>
